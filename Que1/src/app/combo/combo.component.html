@@ -1,0 +1,11 @@
+<h2>Combo Display</h2>
+<select [(ngModel)]="selectedOption">
+  <option *ngFor="let option of comboOptions" [value]="option">{{ option }}</option>
+</select>
+
+<div *ngIf="selectedOption === 'textbox'">
+  <input type="text" placeholder="Text Input">
+</div>
+<div *ngIf="selectedOption === 'textarea'">
+  <textarea placeholder="Text Area"></textarea>
+</div>
